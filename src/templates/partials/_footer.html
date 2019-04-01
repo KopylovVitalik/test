@@ -1,15 +1,50 @@
+
 <div class="footer">
-	<div class="footer__logo-left">
+	<div class="footer__logo footer__logo_left">
 		Our Logo
 	</div>
 	<div class="footer__center">
 		<div class="footer__partners">
-			<div class="icon-amatic"></div>
+			{% for item in [
+				'a',
+				'netent',
+				'amatic',
+				'isosoftbet',
+				'quickspin',
+				'aristocrat',
+				'gaminator',
+				'green_tube',
+				'igt',
+				'wazdan',
+				'microgaming',
+				'ap',
+				'simple_games'
+			] %}
+				<div class="footer__item">
+					<span class="icon-{{ item }}"></span>
+				</div>
+			{% endfor %}
 		</div>
-		<div class="footer__payments"></div>
-		<div class="footer__icon"></div>
+		<div class="footer__payments">
+			{% for item in [
+				'visa',
+				'maestro',
+				'master_card',
+				'web_money',
+				'yandex_money',
+				'q'
+			] %}
+				<div class="footer__item">
+					<span class="icon-{{ item }}"></span>
+				</div>
+				
+			{% endfor %}
+		</div>
+		<div class="footer__icon">
+			<span class="icon-min_age"></span>
+		</div>
 	</div>
-	<div class="footer__logo-rightt">
+	<div class="footer__logo footer__logo_right">
 		Our Logo
 	</div>
 </div>

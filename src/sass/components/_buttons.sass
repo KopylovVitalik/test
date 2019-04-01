@@ -1,0 +1,54 @@
+.cta-btn
+
+.btn
+	display: inline-block
+	padding: 36px 75px 32px
+	border: 2px solid #924e9d
+	background-image: linear-gradient(45deg, #4f2169 0%, #c31e41 100%)
+	text-decoration: none
+	&__text
+		color: $white
+		font-family: $circle
+		+f(24px, 700, 1.2)
+		text-transform: uppercase
+
+.btn-cta
+	display: inline-block
+	position: relative
+	background-color: transparent
+	z-index: 5
+	+hover
+		.btn-cta__shadow
+			+fadein
+	&__shadow
+		position: absolute
+		top: 100%
+		left: 10%
+		right: 10%
+		box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.7)
+		z-index: -1
+		+fadeout($tr)
+	&__inner
+		position: relative
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 335px
+		height: 100px
+		background-image: url(../img/btn_active.png)
+		background-size: cover
+		z-index: 5
+		text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+		color: $white
+		font-family: $acrom
+		+f(32px, 900, 1)
+		text-transform: uppercase;
+		letter-spacing: 0.02em
+		+md 	
+			width: 307px
+			height: 91px
+		+xs 
+			width: 154px
+			height: 46px
+			font-size: 24px
+	

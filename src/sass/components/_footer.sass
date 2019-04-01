@@ -1,3 +1,110 @@
 .footer
-	height: 180px
+	padding: 43px 20px 23px
 	background-color: $black
+	display: flex
+	align-items: center
+	justify-content: center
+	min-height: 180px
+	+md 
+		min-height: 0
+		padding: 20px
+		align-items: flex-start
+	+sm
+		padding: 46px 20px
+	&__logo
+		+flex-size(26.4%)
+		text-align: center
+		color: $white
+		font-family: $myriad
+		+f(86px, 400, 1)
+		+r(1500)
+		font-size: 50px
+		+xl
+			+flex-size(20%)
+		+md 
+			+flex-size(40%)
+		&_right
+			+md 
+				display: none
+	&__center
+		flex-grow: 1
+		text-align: center
+		+sm 
+			display: none
+	&__partners,
+	&__payments
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+		margin: 0 -8px 16px
+	&__item 
+		padding: 0 8px
+		& > *
+			display: inline-block
+	&__icon
+		text-align: center
+		.icon-min_age
+			display: inline-block
+
+@include sprites($spritesheet-sprites)
+
+.icon-a
+	+sprite($a)
+
+.icon-netent
+	+sprite($netent)
+
+.icon-amatic
+	+sprite($amatic)
+	
+.icon-isoftbet
+	+sprite($isoftbet)
+
+.icon-quickspin
+	+sprite($quickspin)
+
+.icon-aristokrat
+	+sprite($aristokrat)
+
+.icon-gaminator
+	+sprite($gaminator)
+
+.icon-green_tube
+	+sprite($green_tube)
+
+.icon-igt
+	+sprite($igt)
+
+.icon-wazdan
+	+sprite($wazdan)
+
+.icon-microgaming
+	+sprite($microgaming)
+
+.icon-ap
+	+sprite($ap)
+
+.icon-simple_games
+	+sprite($simple_games)
+
+.icon-visa
+	+sprite($visa)
+
+.icon-maestro
+	+sprite($maestro)
+
+.icon-master_card
+	+sprite($master_card)
+
+.icon-web_money
+	+sprite($web_money)
+
+.icon-yandex_money
+	+sprite($yandex_money)
+
+.icon-q
+	+sprite($q)
+
+.icon-min_age
+	+sprite($min_age)

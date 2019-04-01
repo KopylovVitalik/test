@@ -1,15 +1,32 @@
 body
-	background: #FFF
-	line-height: 1.4
+	font-family: $circle
+	font-size: 24px
+	font-weight: 400
+	line-height: 1.2
 
 .main
 	height: 100vh
+	overflow: hidden
 	display: flex
 	flex-direction: column
-	+cover
+	background: url(../img/hero_anubis.png), url(../img/hero_gor.png), url(../img/hero_money.png), url(../img/hero_bg.png)
+	background-size: auto calc(100% - 200px), auto calc(100% - 200px), auto calc(100% - 100px), cover
+	background-repeat: no-repeat
+	background-position: right calc(50% - 400px) center, left calc(50% - 400px) center, top center, 0 0
+	+md 
+		background-size: auto calc(100% - 90px), auto calc(100% - 90px), auto calc(100% - 250px), cover
+		background-position: right top, left top, center top 93px, 0 0
 
 .form-wrapper
 	flex-grow: 1
 	display: flex
 	justify-content: center
-	padding: 40px 90px 40px 67px
+	padding: 40px 120px 
+	+md 
+		padding: 196px 90px 78px 67px
+	+xs
+		padding: 100px 30px 30px
+
+.text-upper-bold
+	+f(24px, 700, 1.2)
+	text-transform: uppercase

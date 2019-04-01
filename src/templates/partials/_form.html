@@ -1,9 +1,67 @@
 <div class="form-wrapper">
-	<div class="form" style="background-image: url(./img/form-bg.png)">
-		<h2 class="form__title">
-			ПОЛУЧИТЕ БОНУС!
-			<span class="highlighted">500$</span> 
-			НА ДЕПОЗИТ
-		</h2>
-	</div>
+	<form class="form js-form" style="background-image: url(./img/form_bg.png)">
+		<div class="form__top">
+			<h2 class="form__title">
+				ПОЛУЧИТЕ БОНУС! <br>
+				<span class="highlighted">
+						{# <svg viewBox="0 0 112 48">
+							<defs>
+								<linearGradient id="gr-simple" x1="0" y1="0" x2="0" 2="100%">
+										<stop stop-color="#c05302" offset="0%"/>
+										<stop stop-color="#da7d0f" offset="100%"/>
+								</linearGradient>
+							</defs>	
+							<text text-anchor="middle"
+											x="50%"
+											y="50%"
+											dy=".35em"
+											class="text"
+											fill="url(#gr-simple)"
+											>
+									500$
+								</text>
+							</svg> #}
+						500$
+					</span> 
+				НА ДЕПОЗИТ
+			</h2>
+			<div class="form__input-group">
+				<input 
+					type="text" 
+					class="input"
+					placeholder="Почта"
+					data-validation="required email"
+					data-validation-event="keyup change"
+				/>
+			</div>
+			<div class="form__input-group">
+				<input 
+					type="text" 
+					class="input" 
+					placeholder="Пароль"
+					data-validation="required custom" 
+					data-validation-event="keyup change"
+					data-validation-regexp="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})(^[a-zA-Z0-9_][a-zA-Z0-9_]*$)"
+					>
+			</div>
+		</div>
+		<div class="form__bottom">
+			<div class="form__checkbox">
+				<label class="checkbox">
+					<input type="checkbox" class="checkbox__input" data-validation="required" checked>
+					<span class="checkbox__icon"></span>
+					<span class="checkbox__text">
+						Мне 18 лет и я соглашаюсь с 
+						<a href="#">Правилами конфиденциальности</a>
+					</span>
+				</label>
+			</div>
+			<div class="form__submit">
+				<button type="submit" class="btn-cta">
+					<span class="btn-cta__inner">Играть</span>
+					<span class="btn-cta__shadow"></span>
+				</button>
+			</div>
+		</div>
+	</form>
 </div>

@@ -15,5 +15,6 @@ export const BODY = $('body');
 export const WIN = $(window);
 export const DOC = $(document);
 export const HTMLBODY = $('html, body');
+export const HTML = $('html');
 
 export const WIN_WIDTH = $(window).width();

@@ -13,22 +13,129 @@
 
   <body>
     <!-- BEGIN content -->
-    <div class="main" style='background-image: url(./img/hero-bg.png)'>
+    <div class="main">
       <div class="form-wrapper">
-        <div class="form" style="background-image: url(./img/form-bg.png)">
-          <h2 class="form__title"> ПОЛУЧИТЕ БОНУС! <span class="highlighted">500$</span> НА ДЕПОЗИТ </h2>
-        </div>
+        <form class="form js-form" style="background-image: url(./img/form_bg.png)">
+          <div class="form__top">
+            <h2 class="form__title"> ПОЛУЧИТЕ БОНУС! <br>
+              <span class="highlighted"> 500$ </span> НА ДЕПОЗИТ </h2>
+            <div class="form__input-group">
+              <input type="text" class="input" placeholder="Почта" data-validation="required email" data-validation-event="keyup change" />
+            </div>
+            <div class="form__input-group">
+              <input type="text" class="input" placeholder="Пароль" data-validation="required custom" data-validation-event="keyup change" data-validation-regexp="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})(^[a-zA-Z0-9_][a-zA-Z0-9_]*$)">
+            </div>
+          </div>
+          <div class="form__bottom">
+            <div class="form__checkbox">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" data-validation="required" checked>
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__text"> Мне 18 лет и я соглашаюсь с <a href="#">Правилами конфиденциальности</a>
+                </span>
+              </label>
+            </div>
+            <div class="form__submit">
+              <button type="submit" class="btn-cta">
+                <span class="btn-cta__inner">Играть</span>
+                <span class="btn-cta__shadow"></span>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
       <div class="footer">
-        <div class="footer__logo-left"> Our Logo </div>
+        <div class="footer__logo footer__logo_left"> Our Logo </div>
         <div class="footer__center">
           <div class="footer__partners">
-            <div class="icon-amatic"></div>
+            <div class="footer__item">
+              <span class="icon-a"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-netent"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-amatic"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-isosoftbet"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-quickspin"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-aristocrat"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-gaminator"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-green_tube"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-igt"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-wazdan"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-microgaming"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-ap"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-simple_games"></span>
+            </div>
           </div>
-          <div class="footer__payments"></div>
-          <div class="footer__icon"></div>
+          <div class="footer__payments">
+            <div class="footer__item">
+              <span class="icon-visa"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-maestro"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-master_card"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-web_money"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-yandex_money"></span>
+            </div>
+            <div class="footer__item">
+              <span class="icon-q"></span>
+            </div>
+          </div>
+          <div class="footer__icon">
+            <span class="icon-min_age"></span>
+          </div>
         </div>
-        <div class="footer__logo-rightt"> Our Logo </div>
+        <div class="footer__logo footer__logo_right"> Our Logo </div>
+      </div>
+      <div class="modal" data-modal="error-modal">
+        <div class="modal__container modal__container_error" data-modal-container>
+          <div class="modal__inner">
+            <div class="modal__text"> Пользователь с таким имейлом/телефоном уже существует </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-modal="success-modal">
+        <div class="modal__container modal__container_success" data-modal-container>
+          <div class="modal__inner">
+            <div class="modal__title">Добро пожаловать!</div>
+            <div class="modal__logo"> Some logo </div>
+            <div class="modal__descr"> Для активации аккаунта выполните инструкцию в письме, которое мы отправили на Ваш E-mail. </div>
+            <div class="modal__descr-small"> После активации Вы сможете войти в свой личный кабинет, используя свой логин и пароль. </div>
+            <div class="modal__wish">ЖЕЛАЕМ УДАЧНОЙ ИГРЫ!</div>
+            <div class="modal__cta">
+              <a href="/" class="btn">
+                <span class="btn__text">на главную!</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- END content -->
