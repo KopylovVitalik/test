@@ -5,3 +5,27 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+$circle: 'Circle'
+$myriad: 'MyriadPro-Regular'
+$acrom: 'Acrom'
+
+@font-face
+	+fontdefault(normal, 300, $circle)
+	+fontpath('Circe-Light', 'Circe-Light', Circe-Light)
+
+@font-face
+	+fontdefault(normal, 400, $circle)
+	+fontpath('Circe-Regular', 'Circe-Regular', Circe-Regular)
+
+@font-face
+	+fontdefault(normal, 700, $circle)
+	+fontpath('Circe-Bold', 'Circe-Bold', Circe-Bold)
+
+@font-face
+	+fontdefault(normal, 900, $acrom)
+	+fontpath('Acrom-ExtraBold', 'Acrom-ExtraBold', Acrom-ExtraBold)
+
+@font-face
+	+fontdefault(normal, 400, $myriad)
+	+fontpath('MyriadPro-Regular', 'MyriadPro-Regular', MyriadPro-Regular)

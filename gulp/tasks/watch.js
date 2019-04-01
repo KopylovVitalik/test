@@ -6,6 +6,7 @@ gulp.task('watch',
     
     'nunjucks:watch',
     'sprite:svg:watch',
+    'sprite:png:watch',
     'svgo:watch',
     'list-pages:watch',
     'webpack:watch',
