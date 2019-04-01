@@ -1,31 +1,38 @@
 body
 	font-family: $circle
 	font-size: 24px
-	font-weight: 400
+	font-weight: 700
 	line-height: 1.2
 
 .main
 	height: 100vh
-	overflow: hidden
+	// height: 100%
 	display: flex
 	flex-direction: column
-	background: url(../img/hero_anubis.png), url(../img/hero_gor.png), url(../img/hero_money.png), url(../img/hero_bg.png)
-	background-size: auto calc(100% - 200px), auto calc(100% - 200px), auto calc(100% - 100px), cover
+	background: url(../img/hero_money.png), url(../img/hero_anubis.png), url(../img/hero_gor.png), url(../img/hero_bg.png)
+	background-size: auto calc(100% + 50px), auto calc(100% - 200px), auto calc(100% - 200px), cover
 	background-repeat: no-repeat
-	background-position: right calc(50% - 400px) center, left calc(50% - 400px) center, top center, 0 0
+	background-position: top -85px center, right calc(50% - 372px) center, left calc(50% - 372px) center, 0 0
 	+md 
-		background-size: auto calc(100% - 90px), auto calc(100% - 90px), auto calc(100% - 250px), cover
-		background-position: right top, left top, center top 93px, 0 0
+		background-size: auto calc(100% - 250px), auto calc(100% - 90px), auto calc(100% - 90px), cover
+		background-position: center top 53px, right top, left top, 0 0
+	+xsh
+		height: 100%
+
 
 .form-wrapper
 	flex-grow: 1
 	display: flex
 	justify-content: center
-	padding: 40px 120px 
+	padding: 52px 120px 110px
+	+xl 
+		padding: 40px 100px 80px
 	+md 
-		padding: 196px 90px 78px 67px
+		padding: 188px 90px 78px 67px
+	+sm 
+		padding: 130px 30px 30px
 	+xs
-		padding: 100px 30px 30px
+		padding: 20vh 30px 10vh
 
 .text-upper-bold
 	+f(24px, 700, 1.2)

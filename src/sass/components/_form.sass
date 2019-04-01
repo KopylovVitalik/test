@@ -2,28 +2,33 @@
 	display: flex
 	flex-direction: column
 	justify-content: space-between
-	align-items: center
 	max-width: 665px
 	width: 100%
 	+cover
-	padding: 20px
+	padding: 27px 30px 32px
 	border: 3px solid #c7a221
 	border-radius: 5px
+	+md 
+		padding: 21px 26px 32px
 	&__title
+		margin-bottom: 24px
 		text-align: center
 		text-shadow: 0 3px 11px $black
 		color: $white
 		font-family: $circle
 		+f(53px, 700, 1)
-		letter-spacing: -0.05em
+		letter-spacing: -0.02em
+		word-spacing: 0.043em
 		+md 
 			font-size: 46px
+			margin-bottom: 18px
 		+xs
-			font-size: 32px
+			font-size: 20px
 	&__input-group
 		position: relative
-		&:not(:last-child)
-			margin-bottom: 18px
+		margin-bottom: 23px
+		+xs 
+			margin-bottom: 10px
 		.help-block.form-error
 			position: absolute
 			top: 100%
@@ -34,11 +39,20 @@
 			font-family: $circle
 			+f(18px, 400, 1)
 	&__checkbox
+		padding-left: 40px
+		padding-bottom: 18px
+		+md 
+			padding-left: 30px
+			padding-bottom: 12px
+		+xs 
+			padding-left: 0
 		.help-block.form-error
 			display: none
 	&__submit
 		text-align: center
-		margin-bottom: -40px
+		margin-bottom: -81px
+		+xs 
+			margin-bottom: -50px
 
 .highlighted
 	color: #da7d0f
@@ -47,7 +61,7 @@
 	-webkit-background-clip: text
 
 .input
-	padding: 23px 17px 17px
+	padding: 22px 10px 17px
 	width: 100%
 	color: $black
 	font-family: $circle
@@ -58,6 +72,10 @@
 	transition: border-color $tr
 	+md 
 		height: 56px
+		font-size: 22px
+	+xs 
+		height: 30px
+		font-size: 18px
 	&:focus
 		border-color: $green
 	&.error
@@ -83,36 +101,39 @@
 				transform: scale(1) rotate(45deg) translate(-1px,-1px)
 	&__text
 		display: inline-block
-		padding-left: 24px
+		max-width: 390px
+		padding-left: 32px
 		text-shadow: 0 3px 11px #000000
 		color: $white
-		+f(24px, 400, 1.4)
+		+f(24px, 400, 1.2)
 		position: relative
+		text-align: center
+		+md 
+			max-width: 350px
+			padding-left: 24px
+			font-size: 21px
+		+xs 
+			font-size: 12px
+			padding-left: 6px
+			text-align: left
 		a 
 			color: inherit
 			text-decoration: none
-		// &:before
-		// 	content: ''
-		// 	position: absolute
-		// 	top: 0
-		// 	left: 0
-		// 	height: 20px
-		// 	width: 20px
-		// 	background-color: $lightGrey
-		// 	border-radius: 3px
-		// 	border: 3px solid $lightGrey
 	&__icon
 		display: inline-block
 		flex-shrink: 0
 		position: relative
-		min-width: 30px
 		width: 44px
 		height: 44px
 		border-radius: 3px
 		border: 3px solid $lightGrey
 		background-color: $lightGrey
-		// transition: all .5s ease
-		margin-right: 18px
+		+md 
+			height: 40px
+			width: 40px
+		+xs 
+			width: 20px
+			height: 20px
 		.has-error &
 			border-color: $red
 		&:before
@@ -130,7 +151,6 @@
 			border-bottom: 2px solid $green
 			height: 15px
 			width: 12px
-
-
-// .checkbox__input:checked + .checkbox__icon:before
-// 	transform: scale(1) rotate(45deg) translate(-1px,-1px)
+			+xs 
+				height: 10px
+				width: 8px

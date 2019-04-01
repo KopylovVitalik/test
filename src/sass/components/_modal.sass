@@ -8,12 +8,13 @@
 	opacity: 0
 	visibility: hidden
 	min-width: 320px
-	+vertical
+	display: flex
+	justify-content: center
+	align-items: center
 	+gpu
 	overflow: auto
 	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
 	background-color: rgba($black, 0.5)
-	// padding: 15px
 
 [data-modal]
 	&.is-open
@@ -24,16 +25,15 @@
 [data-modal-container]
 	position: relative
 	z-index: 1
-	vertical-align: middle
-	display: inline-block
-	max-width: 1000px
-	margin: 0 auto
 
 .modal
 	&__container
 		width: 100%
+		margin-top: 10.2vh
+		margin-bottom: auto
 		background-color: $purple
 		color: $white
+		text-align: center
 		&_error
 			max-width: 663px
 			padding: 79px 10px 87px
@@ -43,28 +43,32 @@
 		+sm 
 			padding: 40px 15px
 	&__title
-		padding-bottom: 40px
+		padding-bottom: 3vh
 		font-family: $myriad
 		+f(43px, 400, 1.2)
 		text-transform: uppercase
+		+md 
+			font-size: 30px
 	&__logo
+		margin-bottom: 2vh
 		background-color: #1b1b1b
 		display: flex
 		align-items: center
 		justify-content: center
-		height: 160px
+		height: 14.82vh
 	&__text
 		+f(24px, 400, 3)
 	&__descr
 		margin-bottom: 36px
+		padding: 0 10px
 		font-weight: 700
-		+f(24px, 700, 1.2)
 	&__descr-small
-		color: #ffffff;
+		color: $white
 		font-family: $myriad
-		+f(18px, 400, 1.2)
-		padding: 0 104px 27px	
+		+f(18px, 400, 1.7)
+		padding: 0 96px 20px
+		+xs 
+			padding: 20px
 	&__wish
-		margin-bottom: 34px
-		+f(24px, 700, 1.2)
+		margin-bottom: 2.5vh
 		text-transform: uppercase
