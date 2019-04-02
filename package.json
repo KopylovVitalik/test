@@ -65,5 +65,8 @@
     "through2": "^2.0.1",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^1.5.3"
+  },
+  "dependencies": {
+    "text-gradient": "^0.2.0"
   }
 }

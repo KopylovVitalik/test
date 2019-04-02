@@ -4,7 +4,7 @@
 	border: 2px solid #924e9d
 	background-image: linear-gradient(45deg, #4f2169 0%, #c31e41 100%)
 	text-decoration: none
-	+xs 
+	+md
 		padding: 18px 50px 14px
 	&__text
 		color: $white
@@ -19,17 +19,20 @@
 	position: relative
 	background-color: transparent
 	z-index: 5
+	background-color: #D6125B
+	border-radius: 52px
+	filter: drop-shadow(0 0 9px rgba(0, 0, 0, 0.7))
 	+hover
 		.btn-cta__shadow
-			+fadein
+			opacity: 1
 	&__shadow
 		position: absolute
 		top: 100%
 		left: 10%
 		right: 10%
-		box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.7)
-		z-index: -1
-		+fadeout($tr)
+		box-shadow: 0 0 21px 16px rgba(0, 0, 0, 0.7)
+		opacity: 0.5
+		transition: opacity $tr
 	&__inner
 		position: relative
 		display: inline-flex

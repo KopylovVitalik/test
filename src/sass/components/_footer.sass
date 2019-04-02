@@ -5,10 +5,12 @@
 	align-items: center
 	justify-content: center
 	min-height: 180px
-	+md 
+	+xl
 		min-height: 0
-		padding: 54px 20px
+		padding: 16px 20px
 		align-items: flex-start
+	+sm 
+		padding: 54px 20px
 	+xs
 		padding: 20px
 	&__logo
@@ -26,7 +28,7 @@
 		+xs 
 			font-size: 40px
 		&_right
-			+md 
+			+xl
 				display: none
 	&__center
 		flex-grow: 1
@@ -41,6 +43,8 @@
 		justify-content: center
 		flex-wrap: wrap
 		margin: 0 -6px 16px
+		+xl 
+			margin-bottom: 10px
 	&__item 
 		padding: 0 6px
 		font-size: 0

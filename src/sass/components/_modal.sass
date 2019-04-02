@@ -37,6 +37,7 @@
 		&_error
 			max-width: 663px
 			padding: 79px 10px 87px
+			margin-top: 30vh
 		&_success
 			max-width: 791px
 			padding: 50px 0 25px
@@ -56,19 +57,27 @@
 		align-items: center
 		justify-content: center
 		height: 14.82vh
+		min-height: 100px
 	&__text
-		+f(24px, 400, 3)
+		font-weight: 400
+		+xl 
+			font-size: 20px
 	&__descr
 		margin-bottom: 36px
 		padding: 0 10px
 		font-weight: 700
+		+md 
+			margin-bottom: 18px
+		+xs 
+			margin-bottom: 8px
 	&__descr-small
 		color: $white
 		font-family: $myriad
 		+f(18px, 400, 1.7)
 		padding: 0 96px 20px
-		+xs 
+		+md
 			padding: 20px
+			+f(14px, 400, 1.2)
 	&__wish
 		margin-bottom: 2.5vh
 		text-transform: uppercase
