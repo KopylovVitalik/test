@@ -25,6 +25,8 @@ import Pickr from '@simonwep/pickr/dist/pickr.es5.min';
 // });
 const logo = document.querySelector('.footer__logo');
 
+const root = document.documentElement;
+
 [...document.querySelectorAll('.color-picker')].forEach(selector => {
   let pickr = Pickr.create({
     el: selector,
@@ -34,7 +36,7 @@ const logo = document.querySelector('.footer__logo');
 
       // Main components
       // preview: true,
-      opacity: true,
+      // opacity: true,
       hue: true,
 
       // Input / output Options
@@ -54,7 +56,8 @@ const logo = document.querySelector('.footer__logo');
   pickr.show();
   pickr.on('save', hsva => {
     const selectedColor = hsva.toRGBA().toString();
-    logo.style.color = selectedColor;
+    // logo.style.color = selectedColor;
+    root.style.setProperty('--title-color', selectedColor);
   });
 });
 
