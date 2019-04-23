@@ -1,0 +1,28 @@
+.customizer
+    position: absolute
+    &--font
+        top: 50%
+        left: 50px
+    &--background
+        top: 50px
+        left: 50px
+    &--header
+        top: 20px
+        right: 50px
+    &__content
+        position: absolute
+        top: 100%
+        margin-top: 10px
+        left: -20px
+        right: -20px
+        border-radius: 5px
+        font-size: 16px
+        // padding: 10px
+        // background-color: $white
+        +fadeout(tr)
+        .is-open &
+            +fadein
+
+.pcr-app
+    max-width: 300px
+
